@@ -17,7 +17,7 @@ func Init(ctg *settings.MySQLConfig) (err error) {
 		ctg.Port,
 		ctg.DB,
 	)
-	db, err := sqlx.Connect("mysql", dsn)
+	db, err = sqlx.Connect("mysql", dsn)
 	if err != nil {
 		fmt.Println("connect database error:", err)
 		return
